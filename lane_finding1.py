@@ -43,7 +43,7 @@ def Image_Process(image):
 
     lines_edges = cv.addWeighted(image, 0.8, line_image, 1, 0)
 
-    return cv.imwrite('grey_image2.jpg', lines_edges)
+    return line_edges
 
 
 #use to process single frame(in this case jpg)
