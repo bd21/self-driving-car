@@ -17,12 +17,6 @@ imgpoints = [] # 2d points in image plane.
 images = glob.glob('camera_cal/calibration*.jpg')
 #print(images)
 
-def UndistortImage(image, objectpoints, imagepoints):
-    # im = cv.imread(image)
-    ret, mtx, dist, rvecs, tvecs = cv.calibrateCamera(objectpoints, imagepoints, image.shape[1:], None, None)
-    undistorted_image = cv.undistort(image, mtx, dist, None, mtx)
-    return undistorted_image
-
 # Step through the list and search for chessboard corners
 for fname in images:
     img = cv.imread(fname)
@@ -40,13 +34,18 @@ for fname in images:
         img = cv.drawChessboardCorners(img, (9,6), corners, ret)
         #cv.imshow('img',img)
         #cv.waitKey(500)
-        undistort = UndistortImage(img, objpoints, imgpoints)
-        cv.imshow("undistorted", undistort)
 
 
+def UndistortImage(image, objectpoints, imagepoints):
+    im = cv.imread(image)
+    ret, mtx, dist, rvecs, tvecs = cv.calibrateCamera(objectpoints, imagepoints, im.shape[1:], None, None)
+    undistorted_image = cv.undistort(im, mtx, dist, None, mtx)
+    return undistorted_image
 
 
-
-# cv.waitKey(10000)
+undistort = UndistortImage(test, objpoints, imgpoints)
+#cv.imshow("blah", cv.imread(test))
+cv.imshow("undistorted", undistort)
+cv.waitKey(10000)
 
 #Next step is to find camera calibration matrix and distortion coeffs
