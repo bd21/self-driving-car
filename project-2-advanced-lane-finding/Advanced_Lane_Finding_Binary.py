@@ -90,8 +90,9 @@ for fname in chessboard_images:
 
 #dont need to return dist, mtx?
 corrected_image, mtx, dist = undistort_image(test_image, objpoints, imgpoints)
+cv.imshow('test', corrected_image)
 
-def abs_sobel_binary(img, thresh_min=0, thresh_max=255, kernel_size = 3):
+def abs_sobel_binary(img, thresh_min=0, thresh_max=255, kernel_size=3):
     #change color transformation to something else
     gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
     cv.imshow('test', gray)
