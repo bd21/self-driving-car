@@ -13,45 +13,48 @@ test_image = cv.imread('test1.jpg')
 test3 = cv.imread('test3.jpg')
 straight = cv.imread('straight_lines1.jpg')
 chessboard_images = glob.glob('camera_cal/calibration*.jpg')
+#video = ('project_video.mp4')
 
 
-def main(input):
-    objpoints, imgpoints = get_points(chessboard_images)
+objp = np.zeros((ny*nx,3), np.float32)
+objp[:,:2] = np.mgrid[0:nx,0:ny].T.reshape(-1,2)
+
+# Arrays to store object points and image points from all the images.
+objectpoints = [] # 3d points in real world space
+imagepoints = [] # 2d points in image plane.
+
+# Make a list of calibration images
+
+for fname in chessboard_images:
+    img = cv.imread(fname)
+    gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+
+    # Find the chessboard corners
+    ret, corners = cv.findChessboardCorners(gray, (nx, ny), None)
+
+    # If found, add object points, image points
+    if ret:
+       # print("found chessboard corners")
+        objectpoints.append(objp)
+        imagepoints.append(corners)
+
+        # Draw and display the corners
+        img = cv.drawChessboardCorners(img, (nx, ny), corners, ret)
+
+def main():
+    save_video()
+
+def all(input):
+    objpoints, imgpoints = objectpoints, imagepoints
     corrected_image, mtx, dist = undistort_image(input, objpoints, imgpoints)
     result, result1 = pipeline(corrected_image)
     top_down = corners_unwarp(result1)[0]
     out_img, left_poly, right_ploy, ploty, left_line, right_line = fit_polynomial(top_down, ym, xm)
     left_val_real, right_val_real = measure_curvature(left_poly, right_ploy, ploty, ym)
     lanes_filled = drawLaneonimage(input, left_line, right_line)
-    display(lanes_filled)
+    return lanes_filled
 
 
-def get_points(chessboard_ims):
-    objp = np.zeros((ny*nx,3), np.float32)
-    objp[:,:2] = np.mgrid[0:nx,0:ny].T.reshape(-1,2)
-
-    # Arrays to store object points and image points from all the images.
-    objpoints = [] # 3d points in real world space
-    imgpoints = [] # 2d points in image plane.
-
-    # Make a list of calibration images
-
-    for fname in chessboard_ims:
-        img = cv.imread(fname)
-        gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
-
-        # Find the chessboard corners
-        ret, corners = cv.findChessboardCorners(gray, (nx, ny), None)
-
-        # If found, add object points, image points
-        if ret:
-           # print("found chessboard corners")
-            objpoints.append(objp)
-            imgpoints.append(corners)
-
-            # Draw and display the corners
-            img = cv.drawChessboardCorners(img, (nx, ny), corners, ret)
-    return objpoints, imgpoints
 
 
 # make the lines straight
@@ -267,7 +270,7 @@ def save_video():
         bool, frame = video.read()
 
         if bool:
-            edited_frame = True#process_image(frame)
+            edited_frame = all(frame)
             out.write(edited_frame)
 
         else:
@@ -283,9 +286,8 @@ def display(subject):
     plt.imshow(subject)
     plt.show()
 
-
 if __name__ == '__main__':
-    main(test_image)
+    main()
 
 
 
