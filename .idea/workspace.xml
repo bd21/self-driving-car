@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="354e6fe1-6e53-442d-9a8e-cb7c8bd24f21" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/self-driving-car-lane-finding.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/self-driving-car-lane-finding.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py" beforeDir="false" afterPath="$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/Postman-linux-x64-6.7.4.tar.gz" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,48 +14,15 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/self_driving_car_lane_finding$lane_finding1.coverage" NAME="lane_finding1 Coverage Results" MODIFIED="1551142531860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="534348461">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.3" value="3" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="py" value="2700" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Python" value="2700" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="jpg" value="9" />
-          <entry key="py" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Image" value="9" />
-          <entry key="Python" value="7" />
-        </counts>
-      </usages-collector>
-    </session>
+    <SUITE FILE_PATH="coverage/self_driving_car$advanced_lane_finding_2.coverage" NAME="advanced-lane-finding-2 Coverage Results" MODIFIED="1552383551805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project-2-advanced-lane-finding" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Advanced_Lane_Finding.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Advanced_Lane_Finding_Binary.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="99" column="37" selection-start-line="99" selection-start-column="37" selection-end-line="99" selection-end-column="37" />
+            <state relative-caret-position="249">
+              <caret line="197" column="13" selection-start-line="197" selection-start-column="12" selection-end-line="197" selection-end-column="13" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -63,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Advanced_Lane_Finding_Binary.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="112" column="40" lean-forward="true" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
+            <state relative-caret-position="494">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -84,6 +51,16 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>cv.</find>
+      <find>objp</find>
+      <find>s</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>cv2.</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -94,11 +71,14 @@
         <option value="$PROJECT_DIR$/project-2-advanced-lane-finding/Advanced_Lane_Finding.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="C:/PyCharm/SDC_2/Advanced_Lane_Finding.py" />
+        <option value="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/advanced-lane-finding-2.py" />
+        <option value="$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1913" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1586" />
+    <option name="y" value="39" />
     <option name="width" value="974" />
     <option name="height" value="1167" />
   </component>
@@ -107,6 +87,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -123,13 +104,12 @@
               <item name="self-driving-car" type="b2602c69:ProjectViewProjectNode" />
               <item name="self-driving-car" type="462c0819:PsiDirectoryNode" />
               <item name="project-2-advanced-lane-finding" type="462c0819:PsiDirectoryNode" />
-              <item name="camera_cal" type="462c0819:PsiDirectoryNode" />
+              <item name="Test_Inputs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -140,6 +120,9 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/project-2-advanced-lane-finding" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\PyCharm\SDC_2" />
     </key>
@@ -156,7 +139,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Advanced_Lane_Finding (1)">
+  <component name="RunManager" selected="Python.advanced-lane-finding-2">
     <configuration name="Advanced_Lane_Finding (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="self-driving-car-lane-finding" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -169,6 +152,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="C:/PyCharm/SDC_2/Advanced_Lane_Finding.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -190,7 +174,30 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project-2-advanced-lane-finding/Advanced_Lane_Finding.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="advanced-lane-finding-2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="self-driving-car-lane-finding" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project-2-advanced-lane-finding" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -233,6 +240,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -247,9 +255,11 @@
       <item itemvalue="Python.Advanced_Lane_Finding" />
       <item itemvalue="Python.Advanced_Lane_Finding (1)" />
       <item itemvalue="Python.test" />
+      <item itemvalue="Python.advanced-lane-finding-2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.advanced-lane-finding-2" />
         <item itemvalue="Python.Advanced_Lane_Finding (1)" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.Advanced_Lane_Finding" />
@@ -268,22 +278,23 @@
       <option name="presentableId" value="Default" />
       <updated>1551140507086</updated>
       <workItem from="1551140509053" duration="2085000" />
+      <workItem from="1552380610372" duration="2895000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2085000" />
+    <option name="totallyTimeSpent" value="4980000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1913" y="0" width="974" height="1167" extended-state="0" />
+    <frame x="0" y="35" width="2560" height="1311" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2948718" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20249598" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3274918" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3270853" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39587852" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -305,9 +316,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lane_finding1.py" />
     <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration2.jpg">
@@ -324,25 +332,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/test_image2.jpg" />
     <entry file="file://$PROJECT_DIR$/test.py" />
-    <entry file="file://C:/PyCharm/SDC_2/Lib/site-packages/numpy/core/fromnumeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="2503" selection-start-line="2503" selection-end-line="2503" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/PyCharm/SDC_2/Lib/site-packages/numpy/core/numeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="167" selection-start-line="167" selection-end-line="167" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/PyCharm/SDC_2/Lib/site-packages/numpy/core/fromnumeric.py" />
+    <entry file="file://C:/PyCharm/SDC_2/Lib/site-packages/numpy/core/numeric.py" />
     <entry file="file://C:/PyCharm/SDC_2/Advanced_Lane_Finding.py" />
     <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Advanced_Lane_Finding.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="99" column="37" selection-start-line="99" selection-start-column="37" selection-end-line="99" selection-end-column="37" />
+        <state relative-caret-position="3458">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration7.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Test_Inputs/test1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Test_Inputs/test3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Test_Inputs/straight_lines1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -351,8 +369,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Advanced_Lane_Finding_Binary.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="112" column="40" lean-forward="true" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
+        <state relative-caret-position="249">
+          <caret line="197" column="13" selection-start-line="197" selection-start-column="12" selection-end-line="197" selection-end-column="13" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
