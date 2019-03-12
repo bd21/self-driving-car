@@ -4,6 +4,7 @@ import numpy as np
 import cv2
 import glob
 import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 
 
 # The goal of this pipeline is to read in a video, frame by frame,
@@ -13,32 +14,40 @@ import matplotlib.pyplot as plt
 # @author Blake Denniston (bd21)
 
 # parameters
-# calibration
 calibration_images = "camera_cal/calibration*.jpg"
 nx = 9  # 9 horizontal points on the calibration chessboard
 ny = 6  # 6 vertical points
 
 
 video_location = "Test_Inputs/project_video.mp4"
-test_image_location = "TestInputs/straight_lines1.jpg"
+test_image_location = "Test_Inputs/straight_lines1.jpg"
 
 
 # main pipeline controller
 def main():
-    
     # calibrate camera
-    chessboard_images = glob.glob(calibration_images)
-    calibrate_camera(chessboard_images)
-    
+    # chessboard_images = glob.glob(calibration_images)
+    # mtx, dist = calibrate_camera(chessboard_images)
+
     # load video
-    input_video = cv2.imread(video_location)
+    # input_video = cv2.imread(video_location)
     # separate into frames
+
+    img = mpimg.imread(test_image_location)
+    new_img = process_frame(img)
+    cv2.imshow('img', new_img)
+    cv2.waitKey(6000)
 
     # for frame in frames:
     #     frame = process_frame()
     #     result.append(frame)
-    # 
+    #
     # return frame
+
+def process_frame(img):
+    # create thresholded binary image
+    tbi_image = transform_to_threshold_binary_image(img)
+    return tbi_image
 
 
 def calibrate_camera(chessboard_images):
@@ -64,18 +73,46 @@ def calibrate_camera(chessboard_images):
             objpoints.append(objp)
             imgpoints.append(corners)
 
-            # Draw and display the corners
-            img = cv2.drawChessboardCorners(img, (nx, ny), corners, ret)
-            plt.imshow(img)
-            time.sleep(2)
+            # Uncomment to draw and display the corners frame by frame
+            # img = cv2.drawChessboardCorners(img, (nx, ny), corners, ret)
+            # cv2.imshow('img', img)
+            # cv2.waitKey(2000)
+
+        # get the camera matrix, distortion coefficients, rotation and translation vectors
+        ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
+
+        return mtx, dist
 
 
-def process_frame():
-    pass
+def transform_to_threshold_binary_image(img):
 
+    s_thresh = (170, 255)
+    sx_thresh = (20, 100)
 
-def transform_to_threshold_binary_image():
-    pass
+    # Convert to HLS color space and separate the V channel
+    hls = cv2.cvtColor(img, cv2.COLOR_RGB2HLS)
+    l_channel = hls[:, :, 1]
+    s_channel = hls[:, :, 2]
+
+    # Sobel x
+    sobelx = cv2.Sobel(l_channel, cv2.CV_64F, 1, 0)  # Take the derivative in x
+    abs_sobelx = np.absolute(sobelx)  # Absolute x derivative to accentuate lines away from horizontal
+    scaled_sobel = np.uint8(255 * abs_sobelx / np.max(abs_sobelx))
+
+    # Threshold x gradient
+    sxbinary = np.zeros_like(scaled_sobel)
+    sxbinary[(scaled_sobel >= sx_thresh[0]) & (scaled_sobel <= sx_thresh[1])] = 1
+
+    # Threshold color channel
+    s_binary = np.zeros_like(s_channel)
+    s_binary[(s_channel >= s_thresh[0]) & (s_channel <= s_thresh[1])] = 1
+    # Stack each channel
+    color_binary = np.dstack((np.zeros_like(sxbinary), sxbinary, s_binary)) * 255
+
+    # convert back to greyscale
+    color_binary = cv2.cvtColor(color_binary, cv2.COLOR_BGR2GRAY)
+
+    return color_binary
 
 
 def transform_to_birds_eye_view():
