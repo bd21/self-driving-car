@@ -7,21 +7,38 @@ nx = 9
 ny = 6
 
 test = cv.imread('camera_cal/calibration1.jpg')
-test_image = cv.imread('Test_Inputs/test1.jpg')
-test3 = cv.imread('Test_Inputs/test3.jpg')
-straight = cv.imread('Test_Inputs/straight_lines1.jpg')
-
-#prepare object points, like (0,0,0), (1,0,0), (2,0,0) ....,(6,5,0)
-#objp defines number of horizonal white(9) and vertical black(6) intersections(corners) that occur
-objp = np.zeros((ny*nx,3), np.float32)
-objp[:,:2] = np.mgrid[0:nx,0:ny].T.reshape(-1,2)
-
-# Arrays to store object points and image points from all the images.
-objpoints = [] # 3d points in real world space
-imgpoints = [] # 2d points in image plane.
-
-# Make a list of calibration images
+test_image = cv.imread('test1.jpg')
+test3 = cv.imread('test3.jpg')
+straight = cv.imread('straight_lines1.jpg')
 chessboard_images = glob.glob('camera_cal/calibration*.jpg')
+
+
+def get_points(chessboard_ims):
+    objp = np.zeros((ny*nx,3), np.float32)
+    objp[:,:2] = np.mgrid[0:nx,0:ny].T.reshape(-1,2)
+
+    # Arrays to store object points and image points from all the images.
+    objpoints = [] # 3d points in real world space
+    imgpoints = [] # 2d points in image plane.
+
+    # Make a list of calibration images
+
+    for fname in chessboard_ims:
+        img = cv.imread(fname)
+        gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+
+        # Find the chessboard corners
+        ret, corners = cv.findChessboardCorners(gray, (nx, ny), None)
+
+        # If found, add object points, image points
+        if ret:
+           # print("found chessboard corners")
+            objpoints.append(objp)
+            imgpoints.append(corners)
+
+            # Draw and display the corners
+            img = cv.drawChessboardCorners(img, (nx, ny), corners, ret)
+    return objpoints, imgpoints
 
 # make the lines straight
 def undistort_image(image, objectpoints, imagepoints):
@@ -48,28 +65,10 @@ def corners_unwarp(img):
     # Return the resulting image and matrix
     return warped_img
 
+objpoints, imgpoints = get_points(chessboard_images)
 
-for fname in chessboard_images:
-    img = cv.imread(fname)
-    gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
-
-    # Find the chessboard corners
-    ret, corners = cv.findChessboardCorners(gray, (nx, ny), None)
-
-    # If found, add object points, image points
-    if ret:
-       # print("found chessboard corners")
-        objpoints.append(objp)
-        imgpoints.append(corners)
-
-        # Draw and display the corners
-        img = cv.drawChessboardCorners(img, (nx, ny), corners, ret)
-
-
-#dont need to return dist, mtx?
 corrected_image, mtx, dist = undistort_image(test_image, objpoints, imgpoints)
 
-#unwarped_image = corners_unwarp(corrected_image, 9, 6)
 
 #color thresh = s_thresh; x gradient = sx_thresh
 def pipeline(img, s_thresh=(90, 255), sx_thresh=(20, 100)):
@@ -102,11 +101,6 @@ def pipeline(img, s_thresh=(90, 255), sx_thresh=(20, 100)):
 result, result1 = pipeline(corrected_image)
 
 top_down = corners_unwarp(result1)
-
-# plt.imshow(result1)
-# plt.imshow(top_down)
-# plt.show()
-
 
 #Sliding Windows Approach
 def find_lane_pixels(top_down):
