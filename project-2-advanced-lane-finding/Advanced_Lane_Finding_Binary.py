@@ -7,9 +7,9 @@ nx = 9
 ny = 6
 
 test = cv.imread('camera_cal/calibration1.jpg')
-test_image = cv.imread('test1.jpg')
-test3 = cv.imread('test3.jpg')
-straight = cv.imread('straight_lines1.jpg')
+test_image = cv.imread('Test_Inputs/test1.jpg')
+test3 = cv.imread('Test_Inputs/test3.jpg')
+straight = cv.imread('Test_Inputs/straight_lines1.jpg')
 
 #prepare object points, like (0,0,0), (1,0,0), (2,0,0) ....,(6,5,0)
 #objp defines number of horizonal white(9) and vertical black(6) intersections(corners) that occur
