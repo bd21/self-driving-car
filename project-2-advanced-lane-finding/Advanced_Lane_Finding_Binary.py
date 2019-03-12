@@ -5,12 +5,28 @@ import matplotlib.pyplot as plt
 
 nx = 9
 ny = 6
+ym = 30/720
+xm = 3.7/700
 
 test = cv.imread('camera_cal/calibration1.jpg')
 test_image = cv.imread('test1.jpg')
 test3 = cv.imread('test3.jpg')
 straight = cv.imread('straight_lines1.jpg')
 chessboard_images = glob.glob('camera_cal/calibration*.jpg')
+
+def main(input):
+    objpoints, imgpoints = get_points(chessboard_images)
+    corrected_image, mtx, dist = undistort_image(input, objpoints, imgpoints)
+    result, result1 = pipeline(corrected_image)
+    top_down = corners_unwarp(result1)[0]
+    out_img, left_poly, right_ploy, ploty, left_line, right_line = fit_polynomial(top_down, ym, xm)
+    left_val_real, right_val_real = measure_curvature(left_poly, right_ploy, ploty, ym)
+    lanes_filled = drawLaneonimage(input, left_line, right_line)
+    display(lanes_filled)
+
+
+    return
+
 
 
 def get_points(chessboard_ims):
@@ -67,10 +83,6 @@ def corners_unwarp(img):
     # Return the resulting image and matrix
     return warped_img, unwarp_img
 
-objpoints, imgpoints = get_points(chessboard_images)
-
-corrected_image, mtx, dist = undistort_image(test_image, objpoints, imgpoints)
-
 
 #color thresh = s_thresh; x gradient = sx_thresh
 def pipeline(img, s_thresh=(90, 255), sx_thresh=(20, 100)):
@@ -100,9 +112,8 @@ def pipeline(img, s_thresh=(90, 255), sx_thresh=(20, 100)):
     return color_binary, combined_binary
 
 
-result, result1 = pipeline(corrected_image)
 
-top_down = corners_unwarp(result1)[0]
+
 #right_up = corners_unwarp(top_down)[1]
 
 # plt.imshow(result1)
@@ -112,6 +123,7 @@ top_down = corners_unwarp(result1)[0]
 
 
 #Sliding Windows Approach
+
 def find_lane_pixels(top_down):
     # Take a histogram of the bottom half of the image
     histogram = np.sum(top_down[top_down.shape[0] // 2:, :], axis=0)
@@ -219,56 +231,72 @@ def fit_polynomial(binary_warped, ym, xm):
 
     ## Visualization ##
     # Colors in the left and right lane regions
-    #out_img[lefty, leftx] = [255, 0, 0]
-    #out_img[righty, rightx] = [0, 0, 255]
+    out_img[lefty, leftx] = [255, 0, 0]
+    out_img[righty, rightx] = [0, 0, 255]
 
     # Plots the left and right polynomials on the lane lines
-    plt.plot(left_fitx, ploty, color='yellow')
-    plt.plot(right_fitx, ploty, color='yellow')
-
-    return out_img, left_fit_c, right_fit_c, ploty
+    return out_img, left_fit_c, right_fit_c, ploty, left_fit, right_fit
 
 
 
 def measure_curvature(left, right, ploty, ym):
     y_eval = np.max(ploty)*ym
-
-
-    ym_per_pix = 30/720
-    xm_per_pix = 3.7/700
-
     left_curve = ((1 + (2*left[0]*y_eval*ym + left[1])**2)**1.5) / np.absolute(2*left[0])
     right_curve = ((1 + (2*right[0]*y_eval*ym + right[1])**2)**1.5) / np.absolute(2*right[0])
 
 
     return left_curve, right_curve
 
-ym = 30/720
-xm = 3.7/700
+def drawLine(img, left_fit, right_fit):
+    ymax = img.shape[0]
+    ploty = np.linspace(0, ymax-1, ymax)
+    color_warp = np.zeros_like(img).astype(np.uint8)
+    left_fitx = left_fit[0]*ploty**2 + left_fit[1]*ploty + left_fit[2]
+    right_fitx = right_fit[0]*ploty**2 + right_fit[1]*ploty + right_fit[2]
+    pts_left = np.array([np.transpose(np.vstack([left_fitx, ploty]))])
+    pts_right = np.array([np.flipud(np.transpose(np.vstack([right_fitx, ploty])))])
+    pts = np.hstack((pts_left, pts_right))
+    cv.fillPoly(color_warp, np.int_([pts]), (0,255, 0))
+    newwarp = corners_unwarp(color_warp)[1]
+    return cv.addWeighted(img, 1, newwarp, 0.3, 0)
 
 
-out_img, left_poly, right_ploy, ploty = fit_polynomial(top_down, ym, xm)
+def drawLaneonimage(img, left, right):
+    output = drawLine(img, left, right)
+    return cv.cvtColor(output, cv.COLOR_BGR2RGB)
 
-left_val, right_val = measure_curvature(left_poly, right_ploy, ploty, ym)
+def save_video():
+    video = cv.VideoCapture('project_video.mp4')
 
-#change if can figure out
-#correction = .325
+    frame_width = int(video.get(3))
+    frame_height = int(video.get(4))
 
-real_left_curvature = left_val
-real_right_curvature = right_val
+    # define codec, create VideoWriter
+    out = cv.VideoWriter('output.avi', cv.VideoWriter_fourcc('M', 'J', 'P', 'G'), 10, (frame_width, frame_height))
+
+    # iterate through video and process frame by frame
+    while video.isOpened():
+        bool, frame = video.read()
+
+        if bool:
+            edited_frame = True#process_image(frame)
+            out.write(edited_frame)
+
+        else:
+            break
+
+    # Release everything if job is finished
+    video.release()
+    out.release()
+    cv.destroyAllWindows()
 
 
-print(real_left_curvature, real_right_curvature)
+def display(subject):
+    plt.imshow(subject)
+    plt.show()
 
-
-unwarp = corners_unwarp(out_img)[1]
-
-plt.imshow(out_img)
-plt.show()
-
-print('hello')
-
-
+if __name__ == '__main__':
+    main(test_image)
 
 
 
