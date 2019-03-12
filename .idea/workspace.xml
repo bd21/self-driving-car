@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="354e6fe1-6e53-442d-9a8e-cb7c8bd24f21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/self-driving-car-lane-finding.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/self-driving-car-lane-finding.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py" beforeDir="false" afterPath="$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/Postman-linux-x64-6.7.4.tar.gz" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,14 +14,15 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/self_driving_car_lane_finding$lane_finding1.coverage" NAME="lane_finding1 Coverage Results" MODIFIED="1551142531860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/self_driving_car$advanced_lane_finding_2.coverage" NAME="advanced-lane-finding-2 Coverage Results" MODIFIED="1552383551805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project-2-advanced-lane-finding" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Advanced_Lane_Finding_Binary.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+            <state relative-caret-position="249">
+              <caret line="197" column="13" selection-start-line="197" selection-start-column="12" selection-end-line="197" selection-end-column="13" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -30,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+            <state relative-caret-position="494">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -50,6 +50,16 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>cv.</find>
+      <find>objp</find>
+      <find>s</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>cv2.</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -90,6 +100,12 @@
               <item name="self-driving-car" type="462c0819:PsiDirectoryNode" />
               <item name="project-2-advanced-lane-finding" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="self-driving-car" type="b2602c69:ProjectViewProjectNode" />
+              <item name="self-driving-car" type="462c0819:PsiDirectoryNode" />
+              <item name="project-2-advanced-lane-finding" type="462c0819:PsiDirectoryNode" />
+              <item name="Test_Inputs" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -123,7 +139,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Advanced_Lane_Finding (1)">
+  <component name="RunManager" selected="Python.advanced-lane-finding-2">
     <configuration name="Advanced_Lane_Finding (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="self-driving-car-lane-finding" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -160,6 +176,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project-2-advanced-lane-finding/Advanced_Lane_Finding.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="advanced-lane-finding-2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="self-driving-car-lane-finding" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project-2-advanced-lane-finding" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -217,9 +255,11 @@
       <item itemvalue="Python.Advanced_Lane_Finding" />
       <item itemvalue="Python.Advanced_Lane_Finding (1)" />
       <item itemvalue="Python.test" />
+      <item itemvalue="Python.advanced-lane-finding-2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.advanced-lane-finding-2" />
         <item itemvalue="Python.Advanced_Lane_Finding (1)" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.Advanced_Lane_Finding" />
@@ -238,23 +278,23 @@
       <option name="presentableId" value="Default" />
       <updated>1551140507086</updated>
       <workItem from="1551140509053" duration="2085000" />
-      <workItem from="1552380610372" duration="638000" />
+      <workItem from="1552380610372" duration="2895000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2723000" />
+    <option name="totallyTimeSpent" value="4980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="35" width="2560" height="1311" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28542674" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20249598" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3274918" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3270853" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39587852" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -308,20 +348,29 @@
     <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration7.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Advanced_Lane_Finding_Binary.py">
+    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Test_Inputs/test1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Test_Inputs/test3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Test_Inputs/straight_lines1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        <state relative-caret-position="494">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py">
+    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Advanced_Lane_Finding_Binary.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        <state relative-caret-position="249">
+          <caret line="197" column="13" selection-start-line="197" selection-start-column="12" selection-end-line="197" selection-end-column="13" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
