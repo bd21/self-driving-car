@@ -14,6 +14,7 @@ test3 = cv.imread('test3.jpg')
 straight = cv.imread('straight_lines1.jpg')
 chessboard_images = glob.glob('camera_cal/calibration*.jpg')
 
+
 def main(input):
     objpoints, imgpoints = get_points(chessboard_images)
     corrected_image, mtx, dist = undistort_image(input, objpoints, imgpoints)
@@ -23,10 +24,6 @@ def main(input):
     left_val_real, right_val_real = measure_curvature(left_poly, right_ploy, ploty, ym)
     lanes_filled = drawLaneonimage(input, left_line, right_line)
     display(lanes_filled)
-
-
-    return
-
 
 
 def get_points(chessboard_ims):
@@ -55,6 +52,7 @@ def get_points(chessboard_ims):
             # Draw and display the corners
             img = cv.drawChessboardCorners(img, (nx, ny), corners, ret)
     return objpoints, imgpoints
+
 
 # make the lines straight
 def undistort_image(image, objectpoints, imagepoints):
@@ -112,18 +110,7 @@ def pipeline(img, s_thresh=(90, 255), sx_thresh=(20, 100)):
     return color_binary, combined_binary
 
 
-
-
-#right_up = corners_unwarp(top_down)[1]
-
-# plt.imshow(result1)
-# plt.imshow(top_down)
-# plt.imshow(right_up)
-# plt.show()
-
-
 #Sliding Windows Approach
-
 def find_lane_pixels(top_down):
     # Take a histogram of the bottom half of the image
     histogram = np.sum(top_down[top_down.shape[0] // 2:, :], axis=0)
@@ -238,7 +225,6 @@ def fit_polynomial(binary_warped, ym, xm):
     return out_img, left_fit_c, right_fit_c, ploty, left_fit, right_fit
 
 
-
 def measure_curvature(left, right, ploty, ym):
     y_eval = np.max(ploty)*ym
     left_curve = ((1 + (2*left[0]*y_eval*ym + left[1])**2)**1.5) / np.absolute(2*left[0])
@@ -246,6 +232,7 @@ def measure_curvature(left, right, ploty, ym):
 
 
     return left_curve, right_curve
+
 
 def drawLine(img, left_fit, right_fit):
     ymax = img.shape[0]
@@ -264,6 +251,7 @@ def drawLine(img, left_fit, right_fit):
 def drawLaneonimage(img, left, right):
     output = drawLine(img, left, right)
     return cv.cvtColor(output, cv.COLOR_BGR2RGB)
+
 
 def save_video():
     video = cv.VideoCapture('project_video.mp4')
@@ -294,6 +282,7 @@ def save_video():
 def display(subject):
     plt.imshow(subject)
     plt.show()
+
 
 if __name__ == '__main__':
     main(test_image)
