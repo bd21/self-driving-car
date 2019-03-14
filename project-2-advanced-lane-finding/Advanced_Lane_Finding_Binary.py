@@ -73,23 +73,24 @@ def corners_unwarp(img):
 
     #Desired View
     dst = np.float32([[320, 0], [320, 720], [960, 720], [960, 0]])
-    M = cv.getPerspectiveTransform(src, dst)  # The transformation matrix
+    M = cv.getPerspectiveTransform(src, dst)  # transformation matrix
     Minv = cv.getPerspectiveTransform(dst, src)  # Inverse transformation
 
     #img = cv.imread('./test_img.jpg')  # Read the test img
-    warped_img = cv.warpPerspective(img, M, img_size)  # Image warping
+    warped_img = cv.warpPerspective(img, M, img_size)  
 
     unwarp_img = cv.warpPerspective(img, Minv, img_size)
     # Return the resulting image and matrix
     return warped_img, unwarp_img
 
 def pipeline(img, s_thresh=(100, 20), sx_thresh=(15, 100), r_thresh = (210, 255)):
+	#pick up white?
     img = np.copy(img)
     R = img[:,:,0]
     Rbinary = np.zeros_like(R)
     Rbinary[(R > r_thresh[0]) & (R <= r_thresh[1])] = 0
 
-    # Convert to HLS color space and separate the V channel
+    # Convert to HLS color space
     hls = cv.cvtColor(img, cv.COLOR_BGR2HLS)
     h_channel = hls[:, :, 0]
     l_channel = hls[:, :, 1]
@@ -114,7 +115,7 @@ def pipeline(img, s_thresh=(100, 20), sx_thresh=(15, 100), r_thresh = (210, 255)
 
 
 
-#Sliding Windows Approach
+# Windows Approach
 def find_lane_pixels(top_down):
     # Take a histogram of the bottom half of the image
     histogram = np.sum(top_down[top_down.shape[0] // 2:, :], axis=0)
@@ -128,11 +129,11 @@ def find_lane_pixels(top_down):
 
     # HYPERPARAMETERS
     # Choose the number of sliding windows
-    nwindows = 9
+    nwindows = 10
     # Set the width of the windows +/- margin
-    margin = 100
+    margin = 80
     # Set minimum number of pixels found to recenter window
-    minpix = 50
+    minpix = 40
 
     # Set height of windows - based on nwindows above and image shape
     window_height = np.int(top_down.shape[0] // nwindows)
@@ -242,6 +243,7 @@ def measure_curvature(left, right, ploty, ym, xm):
 
 
 def drawLine(img, left_fit, right_fit):
+
     ymax = img.shape[0]
     ploty = np.linspace(0, ymax-1, ymax)
     color_warp = np.zeros_like(img).astype(np.uint8)
