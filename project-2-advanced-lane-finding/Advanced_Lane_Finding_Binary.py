@@ -83,7 +83,7 @@ def corners_unwarp(img):
     # Return the resulting image and matrix
     return warped_img, unwarp_img
 
-def pipeline(img, s_thresh=(100, 20), sx_thresh=(15, 100), r_thresh = (200, 255)):
+def pipeline(img, s_thresh=(100, 20), sx_thresh=(15, 100), r_thresh = (210, 255)):
     img = np.copy(img)
     R = img[:,:,0]
     Rbinary = np.zeros_like(R)
