@@ -19,6 +19,7 @@ class Reader:
                 self.stop()
             else:
                 (self.grabbed, self.frame) = self.stream.read()
+                cv2.waitKey(4)
 
     def stop(self):
         self.stopped = True

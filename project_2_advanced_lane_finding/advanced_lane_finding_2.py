@@ -40,9 +40,6 @@ def main():
     # load video
     input_video = cv2.imread(video_location)
     # separate into frames
-
-    start = time.time()
-
     img = mpimg.imread(test_image_location)
     new_img = process_frame(img, start)
     cv2.imshow('img', new_img)
@@ -189,7 +186,6 @@ def transform_to_threshold_binary_image(img):
 
     return color_binary
 
-# this function is taking the longest time
 def get_lane_lines(img):
     # Find our lane pixels first
     leftx, lefty, rightx, righty, out_img = detect_and_fit_lane_lines(img)

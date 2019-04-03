@@ -14,7 +14,8 @@ class Processor:
 
     def process(self):
         while not self.stopped:
-            advanced_lane_finding_2.process_frame(self.frame)
+            # advanced_lane_finding_2.process_frame(self.frame)
+            cv2.imshow("Video", self.frame)
             if cv2.waitKey(1) == ord("q"):
                 self.stopped = True
 
