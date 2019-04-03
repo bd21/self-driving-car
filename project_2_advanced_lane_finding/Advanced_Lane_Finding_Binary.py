@@ -2,6 +2,7 @@ import numpy as np
 import cv2 as cv
 import glob
 import matplotlib.pyplot as plt
+import time
 
 nx = 9
 ny = 6
@@ -285,7 +286,7 @@ def drawLaneonimage(img, left, right, ym, xm, left_c, right_c, left_curve, right
 
 
 def save_video():
-    video = cv.VideoCapture('shadows.mp4')
+    video = cv.VideoCapture('short_videos/shadows.mp4')
 
     frame_width = int(video.get(3))
     frame_height = int(video.get(4))
@@ -294,14 +295,25 @@ def save_video():
     out = cv.VideoWriter('output1.avi', cv.VideoWriter_fourcc('M', 'J', 'P', 'G'), 10, (frame_width, frame_height))
 
     # iterate through video and process frame by frame
+
+    start = time.time()
+    print("starting processing")
     while video.isOpened():
+        print("time: start of loop", time.time() - start)
+
         bool, frame = video.read()
+        print("time: after read", time.time() - start)
+
         global count
         count = 0
         if bool:
             count +=1
+            print("time: before processing", time.time() - start)
             edited_frame = all(frame)
+            print("time: after processing", time.time() - start)
             out.write(edited_frame)
+            print("time: after write", time.time() - start)
+            print("-------")
 
         else:
             break

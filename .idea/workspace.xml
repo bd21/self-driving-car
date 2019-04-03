@@ -2,9 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="354e6fe1-6e53-442d-9a8e-cb7c8bd24f21" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/Multithreading.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/Processor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/Reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/Writer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py" beforeDir="false" afterPath="$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/Postman-linux-x64-6.7.4.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1-lane-finding/Example_Sources/challenge.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/project_1_lane_finding/Example_Sources/challenge.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1-lane-finding/Example_Sources/solidWhiteRight.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_1_lane_finding/Example_Sources/solidWhiteRight.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1-lane-finding/Example_Sources/solidWhiteRight.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/project_1_lane_finding/Example_Sources/solidWhiteRight.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1-lane-finding/Example_Sources/solidYellowLeft.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/project_1_lane_finding/Example_Sources/solidYellowLeft.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1-lane-finding/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/project_1_lane_finding/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1-lane-finding/lane_finding1.py" beforeDir="false" afterPath="$PROJECT_DIR$/project_1_lane_finding/lane_finding1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1-lane-finding/output.avi" beforeDir="false" afterPath="$PROJECT_DIR$/project_1_lane_finding/output.avi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/Advanced_Lane_Finding_Binary.py" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/Advanced_Lane_Finding_Binary.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/Test_Inputs/plot_lines.py" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/Test_Inputs/plot_lines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/Test_Inputs/project_video.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/Test_Inputs/project_video.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/Test_Inputs/save.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/Test_Inputs/save.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/Test_Inputs/straight_lines1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/Test_Inputs/straight_lines1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/Test_Inputs/test1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/Test_Inputs/test1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/Test_Inputs/test3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/Test_Inputs/test3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/Test_Inputs/warped-example.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/Test_Inputs/warped-example.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/advanced_lane_finding_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration13.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration14.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration15.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration16.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration17.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration17.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration18.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration18.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration19.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration19.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration20.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/fucked-distortion.png" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/fucked-distortion.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/short_videos/shadows.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/short_videos/shadows.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/short_videos/short.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/short_videos/short.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-2-advanced-lane-finding/short_videos/short_road_change.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/project_2_advanced_lane_finding/short_videos/short_road_change.mp4" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,11 +61,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Advanced_Lane_Finding_Binary.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/advanced_lane_finding_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="197" column="13" selection-start-line="197" selection-start-column="12" selection-end-line="197" selection-end-column="13" />
+            <state relative-caret-position="136">
+              <caret line="48" column="9" selection-start-line="48" selection-end-line="49" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/Advanced_Lane_Finding_Binary.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4560">
+              <caret line="328" column="14" selection-start-line="328" selection-start-column="8" selection-end-line="328" selection-end-column="14" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -30,13 +85,46 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/Multithreading.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="67" selection-start-line="67" selection-end-line="67" />
+            <state relative-caret-position="183">
+              <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/Processor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/Reader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/Writer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,6 +144,20 @@
       <find>cv.</find>
       <find>objp</find>
       <find>s</find>
+      <find>video</find>
+      <find>output.avi</find>
+      <find>mp4</find>
+      <find>display(</find>
+      <find>calibrate_camera</find>
+      <find>detect_and_fit_lane_lines</find>
+      <find>drawLine</find>
+      <find>Minv</find>
+      <find>print</find>
+      <find>cv.fill</find>
+      <find>cv2.warp</find>
+      <find>3</find>
+      <find>time</find>
+      <find>imshow</find>
     </findStrings>
     <replaceStrings>
       <replace>cv2.</replace>
@@ -72,22 +174,35 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="C:/PyCharm/SDC_2/Advanced_Lane_Finding.py" />
         <option value="$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/advanced-lane-finding-2.py" />
+        <option value="$PROJECT_DIR$/project-2-advanced-lane-finding/Advanced_Lane_Finding_Binary.py" />
         <option value="$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py" />
+        <option value="$PROJECT_DIR$/project-2-advanced-lane-finding/advanced_lane_finding_2.py" />
+        <option value="$PROJECT_DIR$/project-2-advanced-lane-finding/Reader.py" />
+        <option value="$PROJECT_DIR$/project-2-advanced-lane-finding/multithreading/Processor.py" />
+        <option value="$PROJECT_DIR$/project-2-advanced-lane-finding/multithreading/Writer.py" />
+        <option value="$PROJECT_DIR$/project-2-advanced-lane-finding/multithreading/init.py" />
+        <option value="$PROJECT_DIR$/project-2-advanced-lane-finding/__init__.py" />
+        <option value="$PROJECT_DIR$/project-2-advanced-lane-finding/multithreading/Multithreading.py" />
+        <option value="$PROJECT_DIR$/project-2-advanced-lane-finding/Processor.py" />
+        <option value="$PROJECT_DIR$/project-2-advanced-lane-finding/Multithreading.py" />
+        <option value="$PROJECT_DIR$/project_2_advanced_lane_finding/Multithreading.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1586" />
-    <option name="y" value="39" />
-    <option name="width" value="974" />
-    <option name="height" value="1167" />
+    <option name="x" value="160" />
+    <option name="y" value="106" />
+    <option name="width" value="960" />
+    <option name="height" value="479" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -98,33 +213,37 @@
             <path>
               <item name="self-driving-car" type="b2602c69:ProjectViewProjectNode" />
               <item name="self-driving-car" type="462c0819:PsiDirectoryNode" />
-              <item name="project-2-advanced-lane-finding" type="462c0819:PsiDirectoryNode" />
+              <item name="project_2_advanced_lane_finding" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="self-driving-car" type="b2602c69:ProjectViewProjectNode" />
               <item name="self-driving-car" type="462c0819:PsiDirectoryNode" />
-              <item name="project-2-advanced-lane-finding" type="462c0819:PsiDirectoryNode" />
-              <item name="Test_Inputs" type="462c0819:PsiDirectoryNode" />
+              <item name="project_2_advanced_lane_finding" type="462c0819:PsiDirectoryNode" />
+              <item name="short_videos" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/PyCharm/SDC_2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/project-2-advanced-lane-finding/multithreading" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/project-2-advanced-lane-finding/multithreading" />
+      <recent name="C:\PyCharm\SDC_2" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/project-2-advanced-lane-finding" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\PyCharm\SDC_2" />
+      <recent name="$PROJECT_DIR$/project-2-advanced-lane-finding/multithreading" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -139,7 +258,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.advanced-lane-finding-2">
+  <component name="RunManager" selected="Python.Multithreading (1)">
     <configuration name="Advanced_Lane_Finding (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="self-driving-car-lane-finding" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -162,7 +281,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Advanced_Lane_Finding" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Advanced_Lane_Finding_Binary" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="self-driving-car-lane-finding" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -175,7 +294,51 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project-2-advanced-lane-finding/Advanced_Lane_Finding.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project-2-advanced-lane-finding/Advanced_Lane_Finding_Binary.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Multithreading (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="self-driving-car-lane-finding" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project_2_advanced_lane_finding" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project_2_advanced_lane_finding/Multithreading.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Multithreading" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="self-driving-car-lane-finding" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project-2-advanced-lane-finding/multithreading" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project-2-advanced-lane-finding/Multithreading.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -197,51 +360,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="lane_finding1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="self-driving-car-lane-finding" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lane_finding1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="self-driving-car-lane-finding" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project-2-advanced-lane-finding/advanced_lane_finding_2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -251,19 +370,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.lane_finding1" />
-      <item itemvalue="Python.Advanced_Lane_Finding" />
       <item itemvalue="Python.Advanced_Lane_Finding (1)" />
-      <item itemvalue="Python.test" />
       <item itemvalue="Python.advanced-lane-finding-2" />
+      <item itemvalue="Python.Advanced_Lane_Finding_Binary" />
+      <item itemvalue="Python.Multithreading" />
+      <item itemvalue="Python.Multithreading (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Multithreading (1)" />
+        <item itemvalue="Python.Multithreading" />
         <item itemvalue="Python.advanced-lane-finding-2" />
+        <item itemvalue="Python.Advanced_Lane_Finding_Binary" />
         <item itemvalue="Python.Advanced_Lane_Finding (1)" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.Advanced_Lane_Finding" />
-        <item itemvalue="Python.lane_finding1" />
       </list>
     </recent_temporary>
   </component>
@@ -279,27 +398,31 @@
       <updated>1551140507086</updated>
       <workItem from="1551140509053" duration="2085000" />
       <workItem from="1552380610372" duration="2895000" />
+      <workItem from="1554075211673" duration="1870000" />
+      <workItem from="1554079853258" duration="286000" />
+      <workItem from="1554080170212" duration="12931000" />
+      <workItem from="1554267377238" duration="8442000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4980000" />
+    <option name="totallyTimeSpent" value="28509000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="35" width="2560" height="1311" extended-state="6" />
+    <frame x="0" y="17" width="1280" height="647" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20249598" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27147487" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3270853" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39587852" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32981315" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30392158" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3956133" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32968238" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.30668128" />
@@ -316,18 +439,24 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/self_driving_car$Multithreading.coverage" NAME="Multithreading Coverage Results" MODIFIED="1554275152979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project-2-advanced-lane-finding/multithreading" />
+    <SUITE FILE_PATH="coverage/self_driving_car$Multithreading__1_.coverage" NAME="Multithreading (1) Coverage Results" MODIFIED="1554277246048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project_2_advanced_lane_finding" />
+    <SUITE FILE_PATH="coverage/self_driving_car$Advanced_Lane_Finding_Binary.coverage" NAME="Advanced_Lane_Finding_Binary Coverage Results" MODIFIED="1554101799714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project-2-advanced-lane-finding" />
+    <SUITE FILE_PATH="coverage/self_driving_car$advanced_lane_finding_2.coverage" NAME="advanced-lane-finding-2 Coverage Results" MODIFIED="1554268052955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project-2-advanced-lane-finding" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lane_finding1.py" />
-    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration2.jpg">
+    <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration3.jpg">
+    <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration3.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration4.jpg">
+    <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration4.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration1.jpg">
+    <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration1.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/test_image2.jpg" />
@@ -335,44 +464,85 @@
     <entry file="file://C:/PyCharm/SDC_2/Lib/site-packages/numpy/core/fromnumeric.py" />
     <entry file="file://C:/PyCharm/SDC_2/Lib/site-packages/numpy/core/numeric.py" />
     <entry file="file://C:/PyCharm/SDC_2/Advanced_Lane_Finding.py" />
-    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Advanced_Lane_Finding.py">
+    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Advanced_Lane_Finding.py" />
+    <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/camera_cal/calibration7.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/Test_Inputs/straight_lines1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/carnd-term1/lib/python3.5/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3458">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="584">
+          <caret line="331" selection-start-line="331" selection-end-line="331" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/Test_Inputs/test3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/Test_Inputs/test1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/multithreading/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/Processor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/Writer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/Reader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/advanced_lane_finding_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="48" column="9" selection-start-line="48" selection-end-line="49" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/Advanced_Lane_Finding_Binary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4560">
+          <caret line="328" column="14" selection-start-line="328" selection-start-column="8" selection-end-line="328" selection-end-column="14" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/camera_cal/calibration7.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Test_Inputs/test1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Test_Inputs/test3.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Test_Inputs/straight_lines1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/advanced-lane-finding-2.py">
+    <entry file="file://$PROJECT_DIR$/project_2_advanced_lane_finding/Multithreading.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        <state relative-caret-position="183">
+          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project-2-advanced-lane-finding/Advanced_Lane_Finding_Binary.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="197" column="13" selection-start-line="197" selection-start-column="12" selection-end-line="197" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#57#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -13,59 +13,105 @@ import matplotlib.image as mpimg
 #
 # @author Blake Denniston (bd21)
 
-# parameters
+
+# calibration parameters
 calibration_images = "camera_cal/calibration*.jpg"
 nx = 9  # 9 horizontal points on the calibration chessboard
 ny = 6  # 6 vertical points
 
 
+# input parameters
 video_location = "Test_Inputs/project_video.mp4"
-test_image_location = "Test_Inputs/straight_lines1.jpg"
+test_image_location = "Test_Inputs/test3.jpg"  # todo delete
+
+
+# pipeline parameters
+
+
 
 
 # main pipeline controller
 def main():
-    # calibrate camera
-    # chessboard_images = glob.glob(calibration_images)
-    # mtx, dist = calibrate_camera(chessboard_images)
 
+    # calibrate camera todo uncomment
+    # chessboard_images = glob.glob(calibration_images)
+    # ret, mtx, dist, rvecs, tvecs = calibrate_camera(chessboard_images)
 
     # load video
-    # input_video = cv2.imread(video_location)
+    input_video = cv2.imread(video_location)
     # separate into frames
 
-    img = mpimg.imread(test_image_location)
-    new_img = process_frame(img)
-    cv2.imshow('img', new_img)
-    cv2.waitKey(6000)
+    start = time.time()
 
+    img = mpimg.imread(test_image_location)
+    new_img = process_frame(img, start)
+    cv2.imshow('img', new_img)
+    cv2.waitKey(7000)
+    #
     # for frame in frames:
     #     frame = process_frame()
     #     result.append(frame)
-    #
+
     # return frame
 
-
 def process_frame(img):
+
+    img_size = (img.shape[1], img.shape[0])
+
+    temp_img = img.copy()
 
     # apply distortion correction to image
     # img = undistort_frame(img)
 
     # create thresholded binary image
-    img = transform_to_threshold_binary_image(img)
+    temp_img = transform_to_threshold_binary_image(temp_img)
 
     # transform to birds eye view
-    img, M = undistort_frame(img)
+    temp_img, M, Minv = undistort_frame(temp_img, img_size)
 
-    # detect lane pixels
-    img = draw_polynomial_lines(img)
+    # detect lane pixels and extract the left and right lane lines
+    left_fit, right_fit = get_lane_lines(temp_img)
 
-    return img
+    # measure curvature todo
+
+    # draw these lines on a blank screen
+    lane_lines_img = draw_lane_lines(img_size, left_fit, right_fit)
+
+    # transform the fitted lines from the birds eye view to the original view
+    lane_lines_img = cv2.warpPerspective(lane_lines_img, Minv, img_size)
+
+    # combine this with the original image
+    temp_img = cv2.addWeighted(img, 1, lane_lines_img, 0.8, 0)
+
+    return temp_img
 
 # helper functions
 
 
-def calibrate_camera(chessboard_images):
+def draw_lane_lines(img_size, left_fit, right_fit):
+
+    height = img_size[1]
+    width = img_size[0]
+    color_warp = np.zeros((height, width, 3), np.uint8)
+
+    ploty = np.linspace(0, width, height)
+
+    left_fitx = left_fit[0]*ploty**2 + left_fit[1]*ploty + left_fit[2]
+    right_fitx = right_fit[0]*ploty**2 + right_fit[1]*ploty + right_fit[2]
+    pts_left = np.array([np.transpose(np.vstack([left_fitx, ploty]))])
+    pts_right = np.array([np.flipud(np.transpose(np.vstack([right_fitx, ploty])))])
+    pts = np.hstack((pts_left, pts_right))
+
+    cv2.fillPoly(color_warp, np.int_([pts]), (0,255, 0))
+
+    return color_warp
+
+
+# calibrate the camera based on:
+#   1. a set of input images
+#   2. the number of horizontal intersections
+#   3. the number of vertical intersections
+def calibrate_camera(chessboard_images, nx, ny):
 
     # prepare object points, like (0,0,0), (1,0,0), (2,0,0) ....,(6,5,0)
     # objp defines number of horizontal white(9) and vertical black(6) intersections(corners) that occur
@@ -93,15 +139,12 @@ def calibrate_camera(chessboard_images):
             # cv2.imshow('img', img)
             # cv2.waitKey(2000)
 
-        # get the camera matrix, distortion coefficients, rotation and translation vectors
-        ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
-
-        return mtx, dist
+        # return the camera matrix, distortion coefficients, rotation and translation vectors
+        return cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
 
 
 # undistort frame manually
-def undistort_frame(img):
-    img_size = (img.shape[1], img.shape[0])
+def undistort_frame(img, img_size):
 
     # Vehicle View
     src = np.float32([[580, 460], [205, 720], [1110, 720], [703, 460]])
@@ -109,12 +152,12 @@ def undistort_frame(img):
     # Desired View
     dst = np.float32([[320, 0], [320, 720], [960, 720], [960, 0]])
     M = cv2.getPerspectiveTransform(src, dst)  # The transformation matrix
+    Minv = cv2.getPerspectiveTransform(dst, src) # Inverse transformation matrix
 
     warped_img = cv2.warpPerspective(img, M, img_size)  # Image warping
 
     # Return the resulting image and matrix
-    return warped_img, M
-
+    return warped_img, M, Minv
 
 def transform_to_threshold_binary_image(img):
 
@@ -146,8 +189,8 @@ def transform_to_threshold_binary_image(img):
 
     return color_binary
 
-
-def draw_polynomial_lines(img):
+# this function is taking the longest time
+def get_lane_lines(img):
     # Find our lane pixels first
     leftx, lefty, rightx, righty, out_img = detect_and_fit_lane_lines(img)
 
@@ -156,7 +199,7 @@ def draw_polynomial_lines(img):
     right_fit = np.polyfit(righty, rightx, 2)
 
     # Generate x and y values for plotting
-    ploty = np.linspace(0, img.shape[0]-1, img.shape[0] )
+    ploty = np.linspace(0, img.shape[0]-1, img.shape[0])
     try:
         left_fitx = left_fit[0]*ploty**2 + left_fit[1]*ploty + left_fit[2]
         right_fitx = right_fit[0]*ploty**2 + right_fit[1]*ploty + right_fit[2]
@@ -174,9 +217,9 @@ def draw_polynomial_lines(img):
     plt.plot(left_fitx, ploty, color='yellow')
     plt.plot(right_fitx, ploty, color='yellow')
 
-    return out_img
+    return left_fit, right_fit
 
-
+# detect lane lines with the "sliding windows" approach
 def detect_and_fit_lane_lines(img):
 
     # Take a histogram of the bottom half of the image
@@ -193,11 +236,11 @@ def detect_and_fit_lane_lines(img):
 
     # HYPERPARAMETERS
     # Choose the number of sliding windows
-    nwindows = 9
+    nwindows = 10
     # Set the width of the windows +/- margin
-    margin = 100
+    margin = 180
     # Set minimum number of pixels found to recenter window
-    minpix = 50
+    minpix = 40
 
     # Set height of windows - based on nwindows above and image shape
     window_height = np.int(img.shape[0] // nwindows)
@@ -275,5 +318,5 @@ def get_vehicle_position():
 
 
 # so we can use functions before their declaration
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
